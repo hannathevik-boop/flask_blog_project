@@ -92,3 +92,42 @@ hr {
     border-top: 1px solid #eee;
     margin: 30px 0;
 }
+.post-card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.post-title {
+    margin: 0 0 6px 0;
+}
+
+.post-date {
+    color: #777;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.tags {
+    margin-top: 12px;
+}
+
+.tags a {
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-right: 6px;
+}
+textarea {
+    min-height: 120px;
+}
