@@ -14,12 +14,13 @@
 </h3>
 
 <p class="post-date">{{ post.created }}</p>
-{% if post.image %}
-<img src="{{ url_for('static', filename='uploads/' + post.image) }}" style="width:100%; border-radius:10px; margin-bottom:10px;">
-{% endif %}
+
 <p>
 {{ post.body[:150] }}...
 </p>
+{% if post.image %}
+<img src="{{ url_for('static', filename='uploads/' + post.image) }}" class="card-image">
+{% endif %}
 
 <div class="tags">
 {% for tag in (post.tags or "").split(",") %}
