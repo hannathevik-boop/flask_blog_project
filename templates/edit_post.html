@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Edit Post</h2>
+
+<form method="POST">
+
+<p>
+<label>Title</label><br>
+<input name="title" value="{{ post.title }}">
+</p>
+
+<p>
+<label>Body</label><br>
+<textarea name="body" rows="8">{{ post.body }}</textarea>
+</p>
+
+<p>
+<label>Tags</label><br>
+<input name="tags" value="{{ post.tags }}">
+</p>
+
+<p>
+<button type="submit">Update Post</button>
+</p>
+
+</form>
+
+{% endblock %}
