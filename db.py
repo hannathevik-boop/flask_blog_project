@@ -27,11 +27,11 @@ def get_post(post_id):
     return post
 
 
-def create_post(title, body, tags):
+def create_post(title, body, tags, image):
     conn = get_db()
     conn.execute(
-        "INSERT INTO posts (title, body, tags) VALUES (?, ?, ?)",
-        (title, body, tags),
+        "INSERT INTO posts (title, body, tags, image) VALUES (?, ?, ?, ?)",
+        (title, body, tags, image),
     )
     conn.commit()
     conn.close()
@@ -65,3 +65,4 @@ def add_comment(post_id, title, content):
     )
     conn.commit()
     conn.close()
+    

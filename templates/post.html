@@ -23,6 +23,9 @@
 <form method="post" action="/comment/{{post.id}}">
 
 <input name="title" placeholder="Title">
+{% if post.image %}
+<img src="{{ url_for('static', filename='uploads/' + post.image) }}" style="max-width:100%; border-radius:10px;">
+{% endif %}
 
 <textarea name="content"></textarea>
 

@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS posts (
     title TEXT NOT NULL,
     body TEXT NOT NULL,
     tags TEXT,
+    image TEXT,
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
 """)
