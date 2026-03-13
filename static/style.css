@@ -9,6 +9,66 @@ header {
     text-align: center;
     margin-bottom: 30px;
 }
+/* modern header */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background: #f5f7fb;
+    padding: 20px 0;
+    z-index: 100;
+}
+
+.site-header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.site-header a {
+    color: #111;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* better typography */
+
+body {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+p {
+    color: #444;
+}
+
+/* footer */
+
+.footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* better spacing */
+
+h2 {
+    margin-top: 40px;
+}
+
+.post-card p {
+    margin-top: 10px;
+}
+
+/* smoother UI */
+
+button {
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
 
 .container {
     max-width: 800px;
@@ -130,4 +190,13 @@ hr {
 }
 textarea {
     min-height: 120px;
+}
+.new-post-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
 }
