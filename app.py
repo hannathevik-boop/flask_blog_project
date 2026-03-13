@@ -1,4 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, abort, flashfrom flask import Flask, render_template, request, redirect, url_for, abort
+from flask import Flask, render_template, request, redirect, url_for, abort, flash
+app = Flask(__name__)
+app.secret_key = "supersecretkey"
+
+
+from flask import Flask, render_template, request, redirect, url_for, abort
 import db
 
 app = Flask(__name__)
@@ -39,10 +44,11 @@ def create():
 
         db.create_post(title, body, tags)
 
+        flash("Blog post created successfully!")
+
         return redirect(url_for("home"))
 
     return render_template("create_post.html")
-
 
 @app.route("/edit/<int:post_id>", methods=["GET", "POST"])
 def edit(post_id):
@@ -72,6 +78,7 @@ def comment(post_id):
         abort(400)
 
     db.add_comment(post_id, title, content)
+    flash("Comment added!")
 
     return redirect(url_for("post", post_id=post_id))
 
