@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1><a href="{{ url_for('home') }}">My Blog</a></h1>
+</header>
+
+<hr>
+
+{% block content %}
+{% endblock %}
+
+<hr>
+
+<footer>
+    <p>Flask Blog Project</p>
+</footer>
+
+</body>
+</html>
