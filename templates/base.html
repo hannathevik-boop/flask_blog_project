@@ -6,12 +6,12 @@
 </head>
 
 <body>
-    <div class="container"></div>
 
 <header class="site-header">
     
     <h1><a href="{{ url_for('home') }}">Flask Blog</a></h1>
 </header>
+<div class="container"></div>
 
 {% with messages = get_flashed_messages() %}
   {% if messages %}
