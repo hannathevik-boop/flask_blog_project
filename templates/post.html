@@ -9,7 +9,7 @@
 <img src="{{ url_for('static', filename='uploads/' + post.image) }}" class="post-image">
 {% endif %}
 <div>
-<a href="/edit/{{post.id}}">Edit</a>
+<a href="{{ url_for('edit', post_id=post.id) }}" class="button">Edit post</a>
 </div>
 <h3>Comments</h3>
 

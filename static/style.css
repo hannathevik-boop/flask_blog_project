@@ -1,6 +1,6 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #f5f7fb;
+    background-color: #e1e1dd;
     margin: 0;
     padding: 10rem;
     color: #333;
@@ -15,7 +15,7 @@ header {
 .site-header {
     position: sticky;
     top: 0;
-    background: #f5f7fb;
+    background: #e1e1dd;
     padding: 20px 0;
     z-index: 100;
 }
@@ -31,7 +31,7 @@ header {
     letter-spacing: -0.5px;
 }
 
-/* better typography */
+/* typography */
 
 body {
     font-size: 16px;
@@ -69,8 +69,10 @@ button {
     transition: background 0.2s ease, transform 0.1s ease;
 }
 
-button:hover {
+button:hover, .new-post-btn:hover,.button:hover {
     transform: translateY(-1px);
+    background: #2ba78e;
+    
 }
 
 .container {
@@ -96,12 +98,12 @@ h2, h3 {
 }
 
 a {
-    color: #2563eb;
+    color: #333;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .post {
@@ -124,18 +126,14 @@ a:hover {
     margin-right: 5px;
 }
 
-button {
-    background: #2563eb;
+button, .button {
+    background: #333;
     border: none;
     color: white;
     padding: 10px 16px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
-}
-
-button:hover {
-    background: #1e4fd1;
 }
 
 input, textarea {
@@ -192,7 +190,7 @@ hr {
 
 .tags a {
     background: #eef2ff;
-    color: #3730a3;
+    color: #333;
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 0.8rem;
@@ -204,11 +202,15 @@ textarea {
 .new-post-btn {
     display: inline-block;
     margin-bottom: 20px;
-    background: #2563eb;
+    background: #2ba78e;
     color: white;
     padding: 10px 16px;
     border-radius: 8px;
     font-weight: 500;
+ }
+.new-post-btn:hover {    
+    background: #1e7a6b;
+    transform: translateY(-1px);
 }
 .flash-container {
     margin-bottom: 20px;
