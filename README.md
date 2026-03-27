@@ -7,7 +7,7 @@ Formålet med prosjektet er å demonstrere grunnleggende backend-utvikling, inkl
 
 Applikasjonen lar brukere opprette, vise og redigere bloggposter. Det er også mulig å legge til kommentarer på innlegg, samt filtrere innlegg basert på tags.
 
-Prosjektet er utviklet som en del av et kurs i backend-utvikling og viser hvordan sentrale konsepter som CRUD-operasjoner, databasehåndtering og strukturert kode kan brukes i en webapplikasjon.
+Prosjektet er utviklet som en del av prosjekt-eksamen i PRO1002 og viser hvordan sentrale konsepter som CRUD-operasjoner, databasehåndtering og strukturert kode kan brukes i en webapplikasjon.
 
 ---
 
