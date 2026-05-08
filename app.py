@@ -112,10 +112,7 @@ def tag(tag):
 
     return render_template("tag.html", posts=filtered, tag=tag)
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
-    @app.route("/search")
+@app.route("/search")
 def search():
 
     query = request.args.get("q", "").lower()
@@ -142,3 +139,7 @@ def search():
         posts=results,
         query=query
     )
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    
