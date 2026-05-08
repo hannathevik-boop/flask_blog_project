@@ -4,20 +4,6 @@
     <title>My Blog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<nav class="search-nav">
-
-    <form action="{{ url_for('search') }}" method="GET">
-
-        <input
-            type="text"
-            name="q"
-            placeholder="Search blog..."
-            required
-        >
-
-        <button type="submit">Søk/button>
-
-    </form>
 
 </nav>
 
@@ -28,6 +14,7 @@
     <h1><a href="{{ url_for('home') }}">Alt kunne vore ein e-post</a></h1>
     <h2>ei samling unødvendig djupe observasjonar</h2>
 </header>
+
 <div class="container"></div>
 
 {% with messages = get_flashed_messages() %}
