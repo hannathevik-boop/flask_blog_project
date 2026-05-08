@@ -115,3 +115,30 @@ def tag(tag):
 
 if __name__ == "__main__":
     app.run(debug=True)
+    @app.route("/search")
+def search():
+
+    query = request.args.get("q", "").lower()
+
+    posts = db.get_posts()
+
+    results = []
+
+    for post in posts:
+
+        title = (post["title"] or "").lower()
+        body = (post["body"] or "").lower()
+        tags = (post["tags"] or "").lower()
+
+        if (
+            query in title
+            or query in body
+            or query in tags
+        ):
+            results.append(post)
+
+    return render_template(
+        "search_results.html",
+        posts=results,
+        query=query
+    )

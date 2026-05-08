@@ -4,6 +4,22 @@
     <title>My Blog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+<nav class="search-nav">
+
+    <form action="{{ url_for('search') }}" method="GET">
+
+        <input
+            type="text"
+            name="q"
+            placeholder="Search blog..."
+            required
+        >
+
+        <button type="submit">Søk/button>
+
+    </form>
+
+</nav>
 
 <body>
 
