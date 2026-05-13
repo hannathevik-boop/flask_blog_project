@@ -436,28 +436,3 @@ button,
     }
 }
 
-/* Extra small phones */
-
-@media (max-width: 480px) {
-
-    body {
-        padding: 0.8rem;
-    }
-
-    .site-header h1 {
-        font-size: 1.8rem;
-    }
-
-    .site-header p {
-        font-size: 1rem;
-    }
-
-    .post-card {
-        padding: 15px;
-    }
-
-    button,
-    .button {
-        width: 100%;
-    }
-}
