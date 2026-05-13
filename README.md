@@ -64,9 +64,11 @@ flask-blog-project
 │   ├── create_post.html
 │   ├── edit_post.html
 │   └── tag.html
+│.  └── search_results.html
 │
 ├── static
 │   └── style.css
+│   └── uploads
 │
 └── tests
     ├── test_app.py
@@ -167,4 +169,4 @@ Hvis prosjektet skulle videreutvikles, kunne følgende forbedringer implementere
 
 ## Forfatter
 
-Studentprosjekt utviklet som en del av et kurs i backend-utvikling med Flask og SQLite.
+Studentprosjekt utviklet som en del av prosjekt-eksamen i backend-utvikling med Flask og SQLite.
