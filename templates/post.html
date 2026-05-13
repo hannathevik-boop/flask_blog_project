@@ -6,8 +6,24 @@
 
 <p>{{post.body}}</p>
 {% if post.image %}
-<img src="{{ url_for('static', filename='uploads/' + post.image) }}" class="post-image">
+
+{% set images = post.image.split(",") %}
+
+<div class="{% if images|length == 1 %}single-post-image{% else %}image-gallery{% endif %}">
+
+{% for image in images %}
+
+<img
+    src="{{ url_for('static', filename='uploads/' + image) }}"
+    class="{% if images|length == 1 %}hero-image{% else %}post-image{% endif %}"
+>
+
+{% endfor %}
+
+</div>
+
 {% endif %}
+
 <div>
 <a href="{{ url_for('edit', post_id=post.id) }}" class="button">Rediger innlegg</a>
 </div>

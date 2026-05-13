@@ -55,7 +55,22 @@
 </p>
 
 {% if post.image %}
-<img src="{{ url_for('static', filename='uploads/' + post.image) }}" class="card-image">
+
+{% set images = post.image.split(",") %}
+
+<div class="{% if images|length == 1 %}single-home-image{% else %}home-gallery{% endif %}">
+
+{% for image in images %}
+
+<img
+    src="{{ url_for('static', filename='uploads/' + image) }}"
+    class="{% if images|length == 1 %}large-card-image{% else %}card-image{% endif %}"
+>
+
+{% endfor %}
+
+</div>
+
 {% endif %}
 
 <div class="tags">

@@ -43,19 +43,36 @@ def create():
         body = request.form["body"]
         tags = request.form["tags"]
 
-        image_file = request.files.get("image")
-        image_filename = None
+        image_files = request.files.getlist("images")
 
-        if image_file and image_file.filename != "":
-            filename = secure_filename(image_file.filename)
-            image_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
-            image_file.save(image_path)
-            image_filename = filename
+        image_filenames = []
+
+        for image_file in image_files:
+
+            if image_file and image_file.filename != "":
+
+                filename = secure_filename(image_file.filename)
+
+                image_path = os.path.join(
+                    app.config["UPLOAD_FOLDER"],
+                    filename
+                )
+
+                image_file.save(image_path)
+
+                image_filenames.append(filename)
+
+        image_filename = ",".join(image_filenames)
 
         if not title or not body:
             abort(400)
 
-        db.create_post(title, body, tags, image_filename)
+        db.create_post(
+            title,
+            body,
+            tags,
+            image_filename
+        )
 
         flash("Blog post created successfully!")
 
