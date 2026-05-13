@@ -137,6 +137,20 @@ a:hover {
     font-size: 0.85em;
     margin-right: 5px;
 }
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.comment-count {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0;
+}
 
 button, .button {
     background: #333;
@@ -231,7 +245,7 @@ textarea {
     border: 1px solid #bbf7d0;
 }
 .container {
-    max-width: 750px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 30px 20px;
 }
