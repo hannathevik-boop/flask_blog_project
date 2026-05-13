@@ -31,8 +31,14 @@
 
 {% for c in comments %}
 
-<b>{{c.title}}</b>
-<p>{{c.content}}</p>
+<b>{{ c.title }}</b>
+
+<p class="comment-date">
+    {{ c.created }}
+</p>
+
+<p>{{ c.content }}</p>
+
 <hr>
 
 {% endfor %}
