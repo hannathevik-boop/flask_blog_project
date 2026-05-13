@@ -11,9 +11,16 @@ def get_db():
 
 def get_posts():
     conn = get_db()
-    posts = conn.execute(
-        "SELECT * FROM posts ORDER BY created DESC"
-    ).fetchall()
+    posts = conn.execute("""
+    SELECT
+        posts.*,
+        COUNT(comments.id) AS comment_count
+    FROM posts
+    LEFT JOIN comments
+    ON posts.id = comments.post_id
+    GROUP BY posts.id
+    ORDER BY posts.created DESC
+""").fetchall()
     conn.close()
     return posts
 

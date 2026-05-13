@@ -73,10 +73,24 @@
 
 {% endif %}
 
-<div class="tags">
-{% for tag in (post.tags or "").split(",") %}
-<a href="{{ url_for('tag', tag=tag) }}">{{ tag }}</a>
-{% endfor %}
+<div class="post-meta">
+
+    <div class="tags">
+
+        {% for tag in (post.tags or "").split(",") %}
+
+        <a href="{{ url_for('tag', tag=tag) }}">
+            {{ tag }}
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+    <p class="comment-count">
+        {{ post.comment_count }} kommentarer
+    </p>
+
 </div>
 
 </div>
