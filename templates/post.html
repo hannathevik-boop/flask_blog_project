@@ -9,9 +9,9 @@
 <img src="{{ url_for('static', filename='uploads/' + post.image) }}" class="post-image">
 {% endif %}
 <div>
-<a href="{{ url_for('edit', post_id=post.id) }}" class="button">Edit post</a>
+<a href="{{ url_for('edit', post_id=post.id) }}" class="button">Rediger innlegg</a>
 </div>
-<h3>Comments</h3>
+<h3>Kommentarer</h3>
 
 {% for c in comments %}
 
@@ -21,15 +21,15 @@
 
 {% endfor %}
 
-<h3>Add comment</h3>
+<h3>Skriv kommentar</h3>
 
 <form method="post" action="/comment/{{post.id}}">
 
-<input name="title" placeholder="Title">
+<input name="title" placeholder="Tittel">
 
 <textarea name="content"></textarea>
 
-<button type="submit">Add</button>
+<button type="submit">Legg til</button>
 
 </form>
 

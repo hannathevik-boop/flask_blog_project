@@ -46,7 +46,6 @@ Prosjektet er utviklet med følgende teknologier:
 
 Prosjektet er strukturert på følgende måte:
 
-```id="q0p9km"
 flask-blog-project
 │
 ├── app.py
